@@ -16,6 +16,8 @@ public class Alumno {
     @Column
     private String Apellido;
     @Column
+    private String email;
+    @Column
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
@@ -47,6 +49,14 @@ public class Alumno {
 
     public void setApellido(String apellido) {
         Apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getCreateAt() {

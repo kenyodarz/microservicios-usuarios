@@ -15,12 +15,12 @@ public class AlumnoRestController {
     @Autowired
     AlumnoServiceAPI serviceAPI;
 
-    @GetMapping("/all")
+    @GetMapping
     public List<Alumno> getAll(){
         return  serviceAPI.getAll();
     }
 
-    @GetMapping("/find/{id}")
+    @GetMapping("/{id}")
     public Alumno find(@PathVariable Long id){
         return serviceAPI.get(id);
     }
